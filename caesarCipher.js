@@ -30,7 +30,7 @@ function caesarCipher(string, step) {
     "b",
     "c",
   ];
-  console.log(alphabet.indexOf("x"));
+
   const outputArray = [];
 
   const inputArray = string.split("");
@@ -55,6 +55,5 @@ function caesarCipher(string, step) {
 
   return outputArray.join("");
 }
-caesarCipher("cat eats", 3);
 
 module.exports = caesarCipher;

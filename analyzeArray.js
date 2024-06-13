@@ -1,6 +1,6 @@
 function analyzeArray(array) {
   const max = array.reduce((accumulator, currentValue) => {
-    return currentValue > accumulator ? currentValue : accumulator;
+    return currentValue > accumulator ? currentValue : accumulator; // задача была использовать только reduce? Math.max(...array1)?
   });
   const min = array.reduce((accumulator, currentValue) => {
     return currentValue < accumulator ? currentValue : accumulator;

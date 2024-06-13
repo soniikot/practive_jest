@@ -1,38 +1,29 @@
-const capitalize= require("./capitalize");
+const capitalize = require("./capitalize");
 
-
-
-test('capitalize', () => {
-    expect(capitalize('cat')).toBe("CAT");
+describe("capitalize function", () => {
+  test("capitalize a word", () => {
+    expect(capitalize("cat")).toBe("CAT");
   });
 
-
-  test('capitalize2', () => {
-    expect(capitalize('dog')).toBe("DOG");
+  test("throw an error if input is empty", () => {
+    expect(() => {
+      capitalize("");
+    }).toThrow("please enter something");
   });
 
+  test("return the same string if already capitalized", () => {
+    expect(capitalize("DOG")).toBe("DOG");
+  });
 
-  /**
-   * 
-   * describe block
-   * 
-   * 
-   * cases:
-   * 
-   * 
-   * an empty string
-   * 
-   * 
-   * same string if already capitalized
-   * 
-   * 
-   * a string with mixed case
-   * 
-   * 
-   * capitalize a string with non-alphabetic characters
-   * 
-   * should handle a string with spaces
-   * 
-   * should capitalize a single character
-   * 
-   */
+  test("works with mixed string", () => {
+    expect(capitalize("DOG anD cAt")).toBe("DOG AND CAT");
+  });
+
+  test("capitalize a string with non-alphabetic characters", () => {
+    expect(capitalize("3 dogs and 2 cats")).toBe("3 DOGS AND 2 CATS");
+  });
+
+  test("capitalize a single character", () => {
+    expect(capitalize("y")).toBe("Y");
+  });
+});

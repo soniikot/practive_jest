@@ -1,4 +1,13 @@
 function caesarCipher(string, step) {
+  if (string.length === 0) {
+    throw new Error("please enter something");
+  }
+  if (step === 0) {
+    throw new Error(
+      "please enter different number, otherwise your word wouldn't be encrypted"
+    );
+  }
+
   const alphabet = [
     "a",
     "b",
@@ -34,7 +43,7 @@ function caesarCipher(string, step) {
   const outputArray = [];
 
   const inputArray = string.split("");
-  
+
   inputArray.forEach((element) => {
     const index = alphabet.indexOf(element.toLowerCase());
 
@@ -42,7 +51,6 @@ function caesarCipher(string, step) {
       const newLetter = element;
       outputArray.push(newLetter);
     } else {
-
       if (element.toUpperCase() === element) {
         const index = alphabet.indexOf(element.toLowerCase());
         const newIndex = index + step;

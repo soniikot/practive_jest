@@ -1,16 +1,15 @@
 function analyzeArray(array) {
-  const max = array.reduce((accumulator, currentValue) => {
-    return currentValue > accumulator ? currentValue : accumulator; // задача была использовать только reduce? Math.max(...array1)?
-  });
+  if (array.length === 0) {
+    throw new Error("please use array with elements");
+  }
+  const max = Math.max(...array);
 
-  const min = array.reduce((accumulator, currentValue) => {
-    return currentValue < accumulator ? currentValue : accumulator;
-  });
+  const min = Math.min(...array);
 
   const sum = array.reduce((accumulator, currentValue) => {
     return accumulator + currentValue;
   });
-  
+
   const averageA = sum / array.length;
 
   const results = {

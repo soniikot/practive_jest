@@ -21,7 +21,10 @@ describe("analyzeArray function", () => {
   test(...)
 
   also
-  test for positive and empty one item and negative numbers
+
+  test for positive, empty, one item, and negative numbers
+
+
 
 
 })

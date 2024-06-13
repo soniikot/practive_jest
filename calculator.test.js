@@ -1,7 +1,5 @@
 const calculator = require ("./calculator");
 
-
-
 test('calculator can add',()=>{
     expect(calculator.add(2,4)).toBe(6)
 });

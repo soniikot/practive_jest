@@ -8,3 +8,26 @@ test("analyze array", () => {
     length: 8,
   });
 });
+
+
+/*
+
+добавить describe
+
+describe("analyzeArray function", () => {
+  ...
+
+
+  test(...)
+
+  also
+
+  test for positive, empty, one item, and negative numbers
+
+
+
+
+})
+
+
+*/

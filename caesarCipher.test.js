@@ -19,3 +19,20 @@ test("caesarCipher returns correctly the end of alphabet", () => {
 test("caesarCipher returns punctuation correctly ", () => {
   expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 });
+
+/**
+ * 
+ * add block
+ * describe("caesarCipher function", () => {
+ * 
+ * cases:
+ * 
+ * positive shifts correct
+ * negative shifts correct
+ * 
+ * empty string
+ * 
+ * same string for zero shift
+ * 
+ * 
+ * /
